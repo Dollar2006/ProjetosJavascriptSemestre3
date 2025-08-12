@@ -20,6 +20,28 @@ function calcularMediaPonderada() {
 
   const mediaPonderada = ((nota1 * peso1) + (nota2 * peso2) + (nota3 * peso3)) / (peso1 + peso2 + peso3);
   const resultado = document.getElementById("resultado");
+
+  if (mediaPonderada < 5){
+      resultado.textContent ="A media do aluno é: " + mediaPonderada + ". \nSua classificação é F"
+  }
+  else if(mediaPonderada >= 5 && mediaPonderada <= 6){
+    resultado.textContent = "A media do aluno é: " + mediaPonderada + ". \nSua classificação é E"
+  }
+  else if(mediaPonderada >= 6 && mediaPonderada <= 7){
+    resultado.textContent ="A media do aluno é: " + mediaPonderada + ". \nSua classificação é D"
+  }
+  else if(mediaPonderada >= 7 && mediaPonderada <= 8){
+    resultado.textContent ="A media do aluno é: " + mediaPonderada + ". \nSua classificação é C"
+  }
+  else if(mediaPonderada >= 8 && mediaPonderada <= 9){
+    resultado.textContent = "A media do aluno é: " + mediaPonderada + ". \nSua classificação é B"
+  }
+  else{
+    resultado.textContent ="A media do aluno é: " + mediaPonderada + ". \nSua classificação é A"
+  }
+
+
   
-  resultado.textContent = `A média ponderada é: ${mediaPonderada.toFixed(2)}`;
+  
+ 
 }                                       
