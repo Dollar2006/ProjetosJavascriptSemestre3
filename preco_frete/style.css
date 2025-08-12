@@ -1,0 +1,62 @@
+body {
+    background: #f5f7fa;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    color: #2a5298;
+}
+
+form {
+    background: #fff;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px 40px 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(42,82,152,0.08);
+    border: 1px solid #e3eafc;
+}
+
+label {
+    font-weight: 500;
+    color: #2a5298;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 4px;
+    margin-bottom: 18px;
+    border: 1px solid #b6c6e3;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f8fafc;
+    transition: border 0.2s;
+}
+
+input:focus, select:focus {
+    border: 1.5px solid #2a5298;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #2a5298 0%, #1e3c72 100%);
+}
