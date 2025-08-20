@@ -1,0 +1,138 @@
+/*
+ * Este CSS cria um layout de duas colunas para o formulário e o resultado do IMC.
+ * Em telas grandes, o formulário fica à esquerda (60%) e o resultado à direita (40%).
+ * Em telas menores (tablets e celulares), o layout se torna uma única coluna.
+*/
+
+/* Estilos gerais do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Fundo azul bem claro, tom medicinal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container principal que envolve o formulário e o resultado */
+.main-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    width: 80%; /* Largura total do container principal */
+    max-width: 900px; /* Largura máxima para telas maiores */
+    margin-bottom: 20px;
+}
+
+/* Título principal do aplicativo */
+h1 {
+    color: #004d99; /* Azul escuro */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos do container do formulário, na coluna esquerda */
+.imc-container {
+    padding: 30px;
+    width: 60%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos do container de resultado, na coluna direita */
+.result-container {
+    padding: 30px;
+    width: 40%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid #eee; /* Linha divisória sutil */
+    text-align: center;
+}
+
+/* Estilos do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Estilos dos rótulos (labels) */
+label {
+    color: #333333;
+    font-weight: bold;
+}
+
+/* Estilos dos campos de entrada (inputs) */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Estilo do botão de submissão */
+.submit-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos do título e texto de resultado */
+.result-container h3 {
+    color: #004d99;
+    margin-top: 0;
+}
+
+.result-container p {
+    font-size: 1.1em;
+    color: #333333;
+}
+
+/* --- Responsividade para telas menores --- */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Coloca os itens em uma única coluna */
+        width: 95%;
+    }
+
+    .imc-container,
+    .result-container {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-left: none; /* Remove a linha divisória vertical */
+    }
+
+    .result-container {
+        border-top: 1px solid #eee; /* Adiciona uma linha divisória horizontal */
+    }
+}

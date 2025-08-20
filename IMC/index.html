@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <!--
+ 1°: O código deve receber o nome da pessoa, a altura da pessoa em centimetros, peso da pessoa em kg
+ 2°: Converter os valores para float, converter a altura em centimetros para metros
+ 3°: Calcular o indice de massa corporea através da formula: M = peso(quilos) / altura ** 2
+
+ 4°: Apresentar o indice de massa corporea: 
+   IMC < 16 -> baixo peso muito grave
+   IMC >= 16 e IMC < 17 -> Baixo peso grave
+   IMC >= 17 e IMC < 18.5 -> Baixo peso
+   IMC >= 18.5 e IMC < 25 -> peso normal
+   IMC >= 25 e IMC < 30 -> sobrepeso
+   IMC >= 30 e IMC < 35 -> obesidade grau 1
+   IMC >= 35 e IMC < 40 -> obesidade grau 2
+   IMC >= 40 -> obesidade grau 3
+
+ 5°: Ao termino retornar a seguinte frase: "<Nome> possui índice de massa corporal igual a <m> , sendo classificado como: <IMC> ."
+ -->
+
+ <h1>Calculo de IMC</h1>
+
+   <div class="main-container">
+    <div class="imc-container">
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="peso">Peso:</label>
+            <input type="text" id="peso" name="peso" required>
+            <label for="altura">Altura:</label>
+            <input type="text" id="altura" name="altura" required>
+            <button type="button" onclick="calcularIMC()" class="submit-button">Calcular</button>
+        </form>
+    </div>
+    <div class="result-container">
+        <h3>Resultado:</h3>
+        <p id="resultado">[...]</p>
+    </div>
+   </div>
+</body>
+<script src="script.js"></script>
+</html>
