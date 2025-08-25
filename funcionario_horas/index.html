@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Folha de Pagamento - Rede Hoteleira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Folha de Pagamento</h1>
+    <form id="funcionarioForm" onsubmit="CalculaSalario(event)">
+        <label for="codigo">Código do Funcionário:</label>
+        <input type="text" id="codigo" name="codigo" required><br><br>
+
+        <label for="horas">Horas Trabalhadas no Mês:</label>
+        <input type="text" id="horas" name="horas" required><br><br>
+
+        <label for="turno">Turno de Trabalho:</label>
+        <select id="turno" name="turno" required>
+            <option value="">Selecione</option>
+            <option value="M">Matutino</option>
+            <option value="V">Vespertino</option>
+            <option value="N">Noturno</option>
+        </select><br><br>
+
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria" required>
+            <option value="">Selecione</option>
+            <option value="F">Funcionário</option>
+            <option value="G">Gerente</option>
+        </select><br><br>
+
+        <label>Salario Minimo Estadual: </label>
+        <input type="text" id="salariomin">
+
+        <button type="submit">Calcular Folha</button>
+    </form>
+
+    <div id="resultado">
+        <h2>Resultado</h2>
+        <p id="mensagemResultado"></p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
